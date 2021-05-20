@@ -1,0 +1,36 @@
+.sidebar-placeholder {
+    width: 25%;
+    max-width: 270px;
+    display: inline-block;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 25%;
+    max-width: 270px;
+    padding: 0 48px;
+    background-color: #fff;
+    height: 100vh;
+    position: fixed;
+}
+
+.sidebar__listing {
+    padding-top: 110px;
+}
+
+.sidebar__item {
+    margin: 12px 0;
+    list-style: none;
+}
+
+.sidebar__item a {
+    color: #190134;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 140%;
+    text-decoration: none;
+}
+
+.sidebar__item a span {
+    margin-right: 8px;
+}
