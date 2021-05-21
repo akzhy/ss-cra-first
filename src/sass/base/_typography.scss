@@ -1,0 +1,64 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.heading {
+    font-family: inherit;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
+
+    &--h1 {
+        font-size: $font-xxl;
+    }
+    &--h2 {
+        font-size: $font-xl;
+    }
+    &--h3 {
+        font-size: $font-lg;
+    }
+    &--h4 {
+        font-size: $font-md;
+    }
+    &--h5 {
+        font-size: $font-sm;
+    }
+    &--h6 {
+        font-size: $font-xs;
+    }
+}
+
+.text {
+    font-family: inherit;
+    font-style: normal;
+    font-weight: normal;
+    font-size: $font-md;
+    line-height: 160%;
+
+    &--small {
+        font-size: $font-sm;
+        line-height: 140%;
+    }
+
+    &--bold {
+        font-weight: 700;
+    }
+
+    &--primary {
+        color: #190134;
+    }
+
+    &--secondary {
+        color: #685879;
+    }
+}
+
+.link {
+    font-family: inherit;
+    font-style: normal;
+    font-weight: normal;
+    font-size: $font-md;
+    line-height: 160%;
+    text-decoration: underline;
+    color: #000;
+}

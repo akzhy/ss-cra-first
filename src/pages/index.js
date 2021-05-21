@@ -1,28 +1,23 @@
 import React from 'react';
-import '../styles/main.css';
-import { ColorCards } from './colorcard';
-import { Section, SubSection, TypographySubSection } from './sections';
+import Layout from '../components/layout';
+import { ColorCards } from '../components/colorcard';
+import {
+    Section,
+    SubSection,
+    TypographySubSection,
+} from '../components/sections';
 import { brandColors } from '../utils/brandcolors';
 import { uiTextColors } from '../utils/uitextcolors';
 import { uiElementColors } from '../utils/uielementcolors';
-import { ShadowCards } from './shadowcard';
+import { ShadowCards } from '../components/shadowcard';
 import { shadows } from '../utils/shadows';
 
-export default function Main() {
-    const typographyHeadings = Array.from({ length: 6 }).map((_, i) => (
-        <div
-            key={`typo-h-${i}`}
-            dangerouslySetInnerHTML={{
-                __html: `<h${i + 1} class="heading heading--h${
-                    i + 1
-                }">Heading ${i + 1}</h${i + 1}>`,
-            }}
-        />
-    ));
+const sidebarItems = ['Colors', 'Typography', 'Shadows'];
 
+export default function IndexPage() {
     return (
-        <main className="main">
-            <header className="main__header">
+        <Layout title="Foundation Elements" sidebarItems={sidebarItems}>
+            <header className="header">
                 <h1 className="heading heading--h1">Foundation Elements</h1>
                 <p className="text text--secondary">
                     Here's the very basic for Flamingo Web, either being color
@@ -43,14 +38,17 @@ export default function Main() {
             <Section title="Typography">
                 <div className="section__content__typography">
                     <TypographySubSection>
-                        {typographyHeadings}
+                        <h1 className="heading heading--h1">Heading 1</h1>
+                        <h2 className="heading heading--h2">Heading 2</h2>
+                        <h3 className="heading heading--h3">Heading 3</h3>
+                        <h4 className="heading heading--h4">Heading 4</h4>
+                        <h5 className="heading heading--h5">Heading 5</h5>
+                        <h6 className="heading heading--h6">Heading 6</h6>
                     </TypographySubSection>
                     <TypographySubSection className="texts">
-                        <p className="text typography__item">Paragraph</p>
-                        <p className="text text--bold typography__item">
-                            Paragraph Bold
-                        </p>
-                        <a className="link typography__item" href="#link">
+                        <p className="text">Paragraph</p>
+                        <p className="text text--bold">Paragraph Bold</p>
+                        <a className="link" href="#link">
                             Link
                         </a>
                     </TypographySubSection>
@@ -59,6 +57,6 @@ export default function Main() {
             <Section title="Shadows">
                 <ShadowCards items={shadows} />
             </Section>
-        </main>
+        </Layout>
     );
 }

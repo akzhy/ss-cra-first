@@ -1,20 +1,17 @@
 import React from 'react';
-import '../styles/sidebar.css';
 
-export const sidebarItems = ['Colors', 'Typography', 'Shadows'];
-
-export default function Sidebar() {
+export default function Sidebar({ sidebarItems }) {
     const sidebarListing = sidebarItems.map((item, i) => (
         <SidebarItem title={item} key={item + i} index={i + 1} />
     ));
 
     return (
-        <React.Fragment>
-            <div className="sidebar">
+        <div className="sidebar">
+            <div className="sidebar__element">
                 <ul className="sidebar__listing">{sidebarListing}</ul>
             </div>
-            <div className="sidebar-placeholder"></div>
-        </React.Fragment>
+            <div className="sidebar__placeholder"></div>
+        </div>
     );
 }
 

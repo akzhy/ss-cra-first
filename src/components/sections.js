@@ -14,18 +14,22 @@ export function Section({ children, title }) {
     );
 }
 
-export function SubSection({ children, title }) {
+export function SubSection({ children, title, contentClass = '' }) {
     return (
         <div className="section__subsection">
             <h3 className="heading heading--h3 section__title">{title}</h3>
-            <div className="section__subsection__content">{children}</div>
+            <div className={`section__subsection__content ${contentClass}`}>
+                {children}
+            </div>
         </div>
     );
 }
 
-export function TypographySubSection({ children, className }) {
+export function TypographySubSection({ children, className = '' }) {
     return (
-        <div className={`section__subsection--typography ${className}`}>
+        <div
+            className={`section__subsection section__subsection--typography ${className}`}
+        >
             {children}
         </div>
     );

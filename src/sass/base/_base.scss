@@ -1,0 +1,23 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ebeff7;
+}
+
+.wrapper {
+    display: flex;
+}
+
+.main {
+    padding: 48px;
+
+    &__header p {
+        margin-top: 16px;
+    }
+}

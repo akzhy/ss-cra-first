@@ -1,0 +1,41 @@
+.sidebar {
+    width: 25%;
+    max-width: 270px;
+    height: 100vh;
+    position: relative;
+
+    &__element {
+        width: 25%;
+        max-width: 270px;
+        background-color: #fff;
+        height: 100%;
+        padding: 0 48px;
+        position: fixed;
+    }
+
+    &__listing {
+        padding-top: 110px;
+    }
+
+    &__item {
+        margin: 12px 0;
+        list-style: none;
+        a {
+            color: #190134;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 140%;
+            text-decoration: none;
+            span {
+                margin-right: 8px;
+            }
+        }
+    }
+
+    &__placeholder {
+        width: 25%;
+        max-width: 270px;
+        display: inline-block;
+        height: 100%;
+    }
+}

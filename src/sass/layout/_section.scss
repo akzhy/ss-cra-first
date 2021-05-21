@@ -1,0 +1,24 @@
+.section {
+    margin: 24px 0;
+
+    &__title {
+        color: #190134;
+    }
+
+    &__subsection {
+        margin: 16px 0;
+        &__content {
+            padding: 16px 0;
+        }
+    }
+}
+
+.section__content__typography {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.section__subsection--typography {
+    width: 200px;
+    padding: 32px 0;
+}

@@ -1,13 +1,15 @@
-import Head from './components/head';
-import Main from './components/main';
-import Sidebar from './components/sidebar';
+import { BrowserRouter, Route } from 'react-router-dom';
+import IndexPage from './pages';
+import './sass/main.scss';
 
 function App() {
     return (
         <div className="App">
-            <Head title="UI Elements" />
-            <Sidebar />
-            <Main />
+            <BrowserRouter>
+                <Route path="/" exact>
+                    <IndexPage />
+                </Route>
+            </BrowserRouter>
         </div>
     );
 }

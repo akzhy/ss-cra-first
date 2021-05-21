@@ -1,12 +1,12 @@
 import React from 'react';
 
-export function ColorCard({ hex, title, subTitle }) {
+export function ColorCard({ hex, title, subTitle, className }) {
     return (
         <div className="colorcard">
             <div
-                className="colorcard__color"
+                className={`colorcard__color ${className ?? ''}`}
                 style={{
-                    backgroundColor: hex,
+                    ...(!className && { backgroundColor: hex }),
                 }}
             ></div>
             <div className="colorcard__footer">
@@ -23,8 +23,9 @@ export function ColorCards({ items }) {
             hex={item.hex}
             title={item.title}
             subTitle={item.subTitle}
+            className={item.className}
             key={item.title + item.hex}
         />
     ));
-    return <div className="colorcard--container">{list}</div>;
+    return <div className="colorcards">{list}</div>;
 }

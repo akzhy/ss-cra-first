@@ -1,0 +1,50 @@
+.colorcards {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+
+    .colorcard {
+        width: 220px;
+        background: #fff;
+        border-radius: 4px;
+        overflow: hidden;
+
+        &__color {
+            height: 120px;
+        }
+
+        &__footer {
+            padding: 16px;
+        }
+    }
+}
+
+.section__subsection--typography {
+    .heading {
+        margin: 12px 0;
+        text-align: center;
+    }
+
+    &.texts {
+        margin-left: 200px;
+        text-align: center;
+
+        p,
+        a {
+            margin: 12px 0;
+        }
+    }
+}
+
+.shadows {
+    padding: 16px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    &__card {
+        width: 68px;
+        height: 68px;
+        background-color: #fff;
+    }
+}
