@@ -17,7 +17,7 @@ const sidebarItems = ['Colors', 'Typography', 'Shadows'];
 export default function IndexPage() {
     return (
         <Layout title="Foundation Elements" sidebarItems={sidebarItems}>
-            <header className="header">
+            <header className="main__header">
                 <h1 className="heading heading--h1">Foundation Elements</h1>
                 <p className="text text--secondary">
                     Here's the very basic for Flamingo Web, either being color

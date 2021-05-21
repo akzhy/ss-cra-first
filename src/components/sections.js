@@ -17,7 +17,9 @@ export function Section({ children, title }) {
 export function SubSection({ children, title, contentClass = '' }) {
     return (
         <div className="section__subsection">
-            <h3 className="heading heading--h3 section__title">{title}</h3>
+            <h3 className="heading heading--h3 section__subsection__title">
+                {title}
+            </h3>
             <div className={`section__subsection__content ${contentClass}`}>
                 {children}
             </div>

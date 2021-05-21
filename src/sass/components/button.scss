@@ -1,0 +1,123 @@
+.btn {
+    display: inline-flex;
+    font-size: $font-sm;
+    color: $text-white;
+    height: 36px;
+    border-radius: 24px;
+    padding: 0px 14px;
+    background-color: $brand-primary;
+    border: 0;
+    font-weight: $font-weight-bold;
+    line-height: 36px;
+    cursor: pointer;
+    align-items: center;
+    transition: background-color 0.25s, color 0.25s;
+
+    &--outline {
+        background-color: $element-primary;
+        color: $brand-primary;
+        border: 1px solid $brand-primary;
+    }
+
+    &--minimal {
+        background-color: $element-primary;
+        color: $brand-primary;
+    }
+
+    &--icon {
+        background-color: $element-primary;
+    }
+
+    svg {
+        display: inline-block;
+        max-width: 20px;
+        max-height: 20px;
+    }
+
+    &.btn--state-hover,
+    &:hover {
+        background-color: $brand-primary-light;
+        color: $text-white;
+    }
+
+    &.btn--state-active,
+    &:active {
+        background-color: $brand-primary;
+        color: $text-white;
+    }
+
+    &-secondary {
+        background-color: $brand-secondary;
+
+        &.btn {
+            &--outline {
+                background-color: $element-primary;
+                color: $brand-secondary;
+                border: 1px solid $element-secondary;
+            }
+
+            &--minimal {
+                background-color: $element-primary;
+                color: $brand-secondary;
+            }
+        }
+
+        &.btn--state-hover,
+        &:hover {
+            background-color: $brand-secondary-light;
+            color: $text-white;
+        }
+
+        &.btn--state-active,
+        &:active {
+            background-color: $brand-secondary;
+            color: $text-white;
+        }
+    }
+
+    &--state-loading,
+    &--state-success,
+    &--state-error {
+        padding: 0 24px;
+    }
+
+    &--state-success {
+        background-color: $element-success;
+        color: $text-white;
+
+        &:hover,
+        &:active {
+            background-color: $element-success;
+            color: $text-white;
+        }
+    }
+
+    &--state-error {
+        background-color: $element-error;
+        color: $text-white;
+
+        &:hover,
+        &:active {
+            background-color: $element-error;
+            color: $text-white;
+        }
+    }
+
+    &--state-disabled {
+        background-color: $element-primary;
+        color: $text-tertiary;
+
+        &:hover,
+        &:active {
+            background-color: $element-primary;
+            color: $text-tertiary;
+        }
+    }
+
+    &--state-loading {
+        .icon--loader {
+            transform-origin: 50% 50%;
+            animation: spin 2s infinite linear;
+        }
+    }
+}
